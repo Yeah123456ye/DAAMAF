@@ -10,13 +10,13 @@ def load_dataset(fold, task, SNP_mapping=True, return_tensor=False):
             mytask.append(1)
 
         if t == 'EMCI':
-            mytask.append(3)
+            mytask.append(2)
 
         if t == 'LMCI':
-            mytask.append(4)
+            mytask.append(3)
 
         if t == 'AD':
-            mytask.append(5)
+            mytask.append(4)
 
     mytask = np.array(mytask)
 
@@ -37,7 +37,7 @@ def load_dataset(fold, task, SNP_mapping=True, return_tensor=False):
     task_idx = np.squeeze(task_idx, 1)
     X_MRI = np.load(path + 'MRIdata.npy')[task_idx, :]
     X_PET = np.load(path + 'FDGdata.npy')[task_idx, :]
-    X_SNP = np.load(path + 'SNP1.npy')[task_idx, :]
+    X_SNP = np.load(path + 'SNP.npy')[task_idx, :]
     C_sex = np.load(path + 'C_sex.npy')[task_idx]
     C_edu = np.load(path + 'C_edu.npy')[task_idx]
     C_age = np.load(path + 'C_age.npy')[task_idx]

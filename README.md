@@ -2,10 +2,6 @@
 
 A preliminary implementation of DAAMAF.
 
-## Usage
-### Setup
-**pip**
-
 **Environment**
 See the 'requirements.txt' for environment configuration. 
 pip install -r requirements.txt
@@ -33,7 +29,7 @@ The data used in this study can be openly available at http://adni.loni.usc.edu/
 **Run**
 Training and testing are integrated in file `engine_experiment.py`. To run python engine_experiment.py
 
-**code file**
+**code file**  
 python utils.py	
 Loads and processes data; The SNP data are converted into embedding vectors for processing
 python engine.py	
